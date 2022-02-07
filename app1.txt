@@ -20,5 +20,5 @@ spec:
      name: app-storage
  volumes:
  - name: app-storage
-    hostPath:
+ hostPath:
       path: /tmp
