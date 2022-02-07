@@ -7,10 +7,10 @@ spec:
  - name: app1
    image: supergiantkir/animals:bear
    ports: 
-    - containerPort: 80
-    volumeMounts:
-    - mountPath: /storage
-       name: app-storage
+   - containerPort: 80
+   volumeMounts:
+   - mountPath: /storage
+      name: app-storage
  - name: app2
    image: yanivomc/spring-music:latest
     ports: 
