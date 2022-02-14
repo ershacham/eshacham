@@ -12,6 +12,7 @@ spec:
       tier: frontend
   template:
     metadata:
+      name: app1
       labels:
        tier: frontend
     spec:
