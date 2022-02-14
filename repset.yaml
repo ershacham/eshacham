@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    app: ui
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier:
+  template:
+    metadata:
+      labels:
+        tier: frontend
+spec:
+ containers:
+ - name: app1
+   image: supergiantkir/animals:bear
+   ports: 
+   - containerPort: 80
+   volumeMounts:
+   - mountPath: /storage
+     name: app-storage
+ - name: app2
+   image: yanivomc/spring-music:latest
+   ports: 
+   - containerPort: 8080
+   volumeMounts:
+   - mountPath: /storage
+     name: app-storage
+ volumes:
+ - name: app-storage
+   hostPath:
+      path: /tmp
