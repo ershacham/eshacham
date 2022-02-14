@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       matchLabels:
-        tier: frontend
+       tier: frontend
    spec:
     containers:
     - name: app1
