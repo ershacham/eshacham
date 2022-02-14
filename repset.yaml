@@ -29,7 +29,7 @@ spec:
    - containerPort: 8080
    volumeMounts:
    - mountPath: /storage
-     name: app-storage
+    name: app-storage
   volumes:
   - name: app-storage
     hostPath:
