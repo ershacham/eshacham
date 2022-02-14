@@ -12,7 +12,7 @@ spec:
       tier:
   template:
     metadata:
-      labels:
+      matchLabels:
         tier: frontend
    spec:
     containers:
